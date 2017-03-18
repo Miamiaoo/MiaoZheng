@@ -1,3 +1,6 @@
+/*score: 8 + 0.5(extra credit)
+comments: good job! Keep doing!
+*/
 package assignment;
 
 import java.util.ArrayList;
@@ -20,7 +23,7 @@ public class Assignment3 {
      *  Given an array, reverse the elements within this array and print the result
      *  eg, given{1,2,3,4}, print{4,3,2,1}
      */
-    public void reverseArray(int[] nums) {
+    public void reverseArray(int[] nums) {                              //correct
         //write your code here
     	// consider of two corner cases
     	if(nums == null || nums.length <= 1) {
@@ -43,7 +46,7 @@ public class Assignment3 {
      *  The digits are stored such that the most significant digit is at the head of the array.
      *  eg, given {1,2,9}, return{1,3,0}.
      */
-    public int[] plusOne(int[] digits) {
+    public int[] plusOne(int[] digits) {                  //correct
         //write your code here
     	for (int i = digits.length - 1; i >= 0; i--){
     		//when every digit less than 9
@@ -67,7 +70,7 @@ public class Assignment3 {
      *  Write a program that takes an integer as input and returns all the primes between 1 and that integer(inclusive).
      *  eg, input is 18, you should return{2,3,5,7,11,13,17}
      */
-    public int[] generatePrimes(int n) {
+    public int[] generatePrimes(int n) {               //correct
         //write your code here
     	//define a list to store primes
      	List<Integer> ret = new ArrayList<Integer>(); 
@@ -104,7 +107,7 @@ public class Assignment3 {
      *  to isSubstring
      *  eg, "pineapple" is a rotation of "neapplepi"
      */
-    public boolean isRotation(String s1, String s2) {
+    public boolean isRotation(String s1, String s2) {                         //wrong
     	 //write your code here
     	//s1 and s2 should have same length and s2 is a substring of s1
     	if ((s1.length() == s2.length()) && isSubstring(s1,s2) == true){ 
@@ -131,7 +134,7 @@ public class Assignment3 {
      *  Given two strings, write a method to decide if one is a permutation of the other
      *  hint: the comparison is case sensitive and whitespace is significant
      */
-    public boolean isPermutation(String s1, String s2) {
+    public boolean isPermutation(String s1, String s2) {     //correct, but try not to use Arrays.sort() method because it will cause a large time complexity
         //write your code here
     	//make sure s1 and s2 have the same length
     	if (s1.length() == s2.length()) { 
@@ -157,7 +160,7 @@ public class Assignment3 {
      *  the string to be encoded consists of letters of the alphabet, with no digits, and the string to be
      *  decoded is a valid encoding.
      */
-    public static String encoding(String s) {
+    public static String encoding(String s) {    //the decoding part is wrong, sb.append(ch).append(count); it will cause compile error
         //write your code here
     	if (s == "" || s == null){
     		return "";
@@ -227,7 +230,7 @@ public class Assignment3 {
      * intput is not valid, return -1. A valid parentheses is "()". For example, given "(())", return 2;
      * given "(()))", return -1.
      */
-     public int countValidParentheses(String s) {
+     public int countValidParentheses(String s) {    //partly correct, the last three lines are not necessary. You may return max / 2
          //write your code here
     	 char[] chs = s.toCharArray();
     	 int[] value = new int[chs.length];
