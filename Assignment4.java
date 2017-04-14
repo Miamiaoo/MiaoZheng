@@ -1,3 +1,5 @@
+/*score: 9
+*/
 package assignment;
 
 import java.awt.List;
